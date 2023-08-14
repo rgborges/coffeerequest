@@ -1,0 +1,16 @@
+<div class="flex items-center justify-center h-screen text-xl">
+  <div class="bg-orange-200 shadow-md rounded-lg p-6">
+    <div class="text-orange-700 ">Coffee for every one</div>
+    <img src="../assets/l-intro-1645231221.jpg" alt="coffee" class="h-auto mx-auto max-w-md rounded-lg">
+    <p>Hello and welcome with angular, please go ahead and buy your coffee</p>
+    <div *ngIf="!hasProcessed">
+      <button class="w-16 mt-4 mx-auto block bg-orange-950 text-white rounded-lg" (click)="onUpdate()">Buy</button>
+    </div>
+    <div *ngIf="hasProcessed">
+      <div class="justify-items-center text-green-900 bg-green-200 rounded-lg mt-2 p-2">
+        <p class="font-thin">{{responseMessage}}</p>
+     </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
